@@ -49,8 +49,8 @@ p {
 
 .energy {
   font-size: 20px;
-  position: absolute;
-  bottom: 308px;
+  position: relative;
+  bottom: 168px;
   margin-left: 87px;
 }
 
