@@ -1,0 +1,63 @@
+
+@font-face {
+font-family: MyFirstFont;
+src: url(digital-7.tff) format('truetype');
+}
+
+
+h1 {
+  font-family: MyFirstFont;
+  text-align: center;
+  font-size: 100px;
+}
+
+.dot {
+  height: 300px;
+  width: 300px;
+  border: 5px #cec9d6 solid;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: 8px 6px 5px #CCCC;
+  background-color: #fff679;
+}
+
+p {
+  position: relative;
+  margin-left: 87px;
+  margin-top: 65px;
+  font-size: 40px;
+  border: 4px #8f8e8d solid;
+  text-align: center;
+  width: 114px;
+  border-radius: 25%;
+  background-color: #e0ded7;
+}
+
+.up {
+  font-size: 45px;
+  text-decoration: none;
+  position: relative;
+  bottom: 139px;
+  left: 44px;
+}
+
+.down {
+  font-size: 92px;
+  text-decoration: none;
+  position: relative;
+  bottom: 130px;
+  left: 195px;
+}
+
+a:visited {
+  color: #8f8e8d;
+}
+
+button {
+  position: relative;
+  left: 69px;
+  bottom: 100px;
+  margin: auto;
+  height: 30px;
+  border-radius: 20%
+}
