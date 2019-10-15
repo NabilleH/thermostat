@@ -26,11 +26,17 @@ describe('Thermostat', function() {
       expect(thermostat.getCurrentTemperature()).toEqual(19)
     });
 
-    it('should not decrease the temperature below 10', function () {
+    it('should not decrease the temperature below 10', function() {
       for ( var i = 0; i < 11; i++ ) {
       thermostat.down();
      }
       expect(thermostat.getCurrentTemperature()).toEqual(10)
+    });
+  });
+
+  describe('isPowerSavingModeOn', function() {
+    it('should show the power saving status to be true', function() {
+      expect(thermostat.isPowerSavingModeOn()).toBe(true)
     });
 
   });
