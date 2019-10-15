@@ -77,4 +77,27 @@ describe('Thermostat', function() {
       expect(thermostat.getCurrentTemperature()).toEqual(20);
     });
   });
+
+  describe('energyStatus', function () {
+    it('should show the current enery usage as being low when below 18', function () {
+      thermostat.down();
+      thermostat.down();
+      thermostat.down();
+      expect(thermostat.energyStatus()).toEqual("low-usage");
+    });
+
+    it('should show the current enery usage as being medium when between 18 and 25', function () {
+      expect(thermostat.energyStatus()).toEqual("medium-usage");
+    });
+
+    it('should show the current enery usage as being high when 25 and above', function () {
+      for ( var i = 0; i < 6; i++ ) {
+      thermostat.up();
+     }
+      expect(thermostat.energyStatus()).toEqual("high-usage");
+    });
+
+    
+
+  });
 });
