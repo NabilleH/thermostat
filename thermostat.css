@@ -1,12 +1,11 @@
 
-@font-face {
-font-family: MyFirstFont;
-src: url(digital-7.tff) format('truetype');
+@import url('https://fonts.googleapis.com/css?family=Quantico&display=swap');
+
+body {
+  font-family: 'Quantico', sans-serif;
 }
 
-
 h1 {
-  font-family: MyFirstFont;
   text-align: center;
   font-size: 100px;
 }
