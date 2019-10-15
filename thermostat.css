@@ -54,6 +54,10 @@ p {
   margin-left: 87px;
 }
 
+.eco {
+  left: 15px;
+}
+
 a:visited {
   color: #8f8e8d;
 }
