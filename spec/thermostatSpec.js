@@ -1,3 +1,5 @@
+'use strict';
+
 describe('Thermostat', function() {
   var thermostat
 
@@ -5,18 +7,23 @@ describe('Thermostat', function() {
     thermostat = new Thermostat();
   });
 
-  describe('temperature', function() {
-
-    it('defaults to 20 degrees', function() {
-      expect(thermostat.temperature).toEqual(20)
-    });
-  });
-
   describe('up', function() {
     it("should increase the temperature when selected", function() {
-      thermostat.up;
+      thermostat.up();
       expect(thermostat.temperature).toEqual(21);
     });
   });
 
+  describe('getCurrentTemperature', function () {
+    it('gets the current thermostat temperature', function () {
+      expect(thermostat.getCurrentTemperature()).toEqual(20);
+    });
+  });
+
+  describe('down', function () {
+    it('decresease temperature', function () {
+      thermostat.down();
+      expect(thermostat.getCurrentTemperature()).toEqual(19)
+    });
+  });
 });
