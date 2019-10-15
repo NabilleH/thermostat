@@ -1,11 +1,13 @@
-describe('Thermostat', function () {
+describe('Thermostat', function() {
   var thermostat
 
-  beforeEach(function () {
-  thermostat = new Thermostat();
-});
+  beforeEach(function() {
+    thermostat = new Thermostat();
+  });
 
-  describe('description', function () {
-
+  describe('temperature', function() {
+    it('defaults to 20 degrees', function() {
+      expect(thermostat.temperature).toEqual(20)
+    });
   });
 });
