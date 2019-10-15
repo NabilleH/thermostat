@@ -38,6 +38,19 @@ describe('Thermostat', function() {
     it('should show the power saving status to be true', function() {
       expect(thermostat.isPowerSavingModeOn()).toBe(true)
     });
+  });
 
+  describe('switchOffPowerSaving', function () {
+    it('turns power saving mode off', function () {
+      thermostat.switchOffPowerSaving();
+      expect(thermostat.isPowerSavingModeOn()).toBe(false)
+    });
+  });
+  describe('switchOnPowerSaving', function () {
+    it('turns power saving mode on', function () {
+      thermostat.switchOffPowerSaving();
+      thermostat.switchOnPowerSaving();
+      expect(thermostat.isPowerSavingModeOn()).toBe(true)
+    });
   });
 });
