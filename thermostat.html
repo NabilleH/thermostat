@@ -14,15 +14,17 @@
     <h1>ThermoBot</h1>
 
     <div class="dot">
-      <p>20</p>
-      <a class ='up' href="#">+</a>
-      <a class='down' href="#">-</a>
-      <button class="eco" type="button" name="powerSavingMode">Eco</button>
-      <button class="reset" type="button" name="Reset">Reset</button>
-      <p class='energy'>low-usage</p>
+      <p id="temperature"></p>
+      <a id="temp_up" class ='up' href="#">+</a>
+      <a id="temp_down" class='down' href="#">-</a>
+      <button id="eco" class="eco" type="button" name="powerSavingMode">Eco</button>
+      <button id="reset" class="reset" type="button" name="Reset">Reset</button>
+      <p class='energy'><a id="usage"</a></p>
     </div>
   </div>
-
+<script src="src/thermostat.js"></script>
+<script src="jquery.js"></script>
+<script src="src/interface.js"></script>
 </body>
 
 </html>
