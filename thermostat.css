@@ -47,12 +47,12 @@ p {
   left: 197px;
 }
 
-.energy {
+/* .energy {
   font-size: 20px;
   position: relative;
   bottom: 168px;
   margin-left: 87px;
-}
+} */
 
 .eco {
   left: 15px;
@@ -69,4 +69,28 @@ button {
   margin: auto;
   height: 30px;
   border-radius: 20%
+}
+
+.low-usage {
+  background-color: green;
+  font-size: 20px;
+  position: relative;
+  bottom: 168px;
+  margin-left: 87px;
+}
+
+.medium-usage {
+  background-color: yellow;
+  font-size: 20px;
+  position: relative;
+  bottom: 168px;
+  margin-left: 87px;
+}
+
+.high-usage {
+  background-color: red;
+  font-size: 20px;
+  position: relative;
+  bottom: 168px;
+  margin-left: 87px;
 }

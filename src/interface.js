@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
   updateTemperature();
+  updateUsage();
 
   $('.up').click(function() {
     thermostat.up();
@@ -33,7 +34,8 @@ $(document).ready(function() {
   };
 
   function updateUsage() {
-    $('#usage').text(thermostat.energyStatus);
+    $('#usage').text( thermostat.energyStatus() );
+    $('#usage').attr('class', thermostat.energyStatus());
   };
 
 });
