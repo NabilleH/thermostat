@@ -7,6 +7,7 @@ $(document).ready(function() {
     thermostat.temperature = Number(data)
     console.log(data)
     $('#temperature').text(thermostat.temperature);
+    updateUsage();
   });
 
   updateTemperature();

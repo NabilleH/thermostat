@@ -9,9 +9,7 @@ require 'pg'
 
   post "/retrieve" do
     headers 'Access-Control-Allow-Origin' => '*'
-    p params[:temperature]
     save_temp(temperature: params[:temperature])
-
   end
 
   def save_temp(temperature:)
