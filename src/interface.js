@@ -3,22 +3,33 @@ $(document).ready(function() {
   updateTemperature();
   updateUsage();
 
+  $.get('http://localhost:4567/update', function(data) {
+    thermostat.temperature = Number(data)
+    console.log(data)
+    $('#temperature').text(thermostat.temperature);
+  });
+
+  updateTemperature();
+
   $('.up').click(function() {
     thermostat.up();
     updateTemperature();
     updateUsage();
+    sendState();
   });
 
   $('.down').click(function() {
     thermostat.down();
     updateTemperature();
     updateUsage();
+    sendState();
   });
 
   $('.reset').click(function() {
     thermostat.reset();
     updateTemperature();
     updateUsage();
+    sendState();
   });
 
   $('.eco').click(function() {
@@ -28,6 +39,11 @@ $(document).ready(function() {
       thermostat.switchOnPowerSaving();
     }
   });
+
+  function sendState() {
+    var send = {temperature: thermostat.temperature};
+    $.post('http://localhost:4567/retrieve', send);
+  };
 
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
